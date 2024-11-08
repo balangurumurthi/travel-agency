@@ -1,12 +1,12 @@
 /* Apply scroll snapping */
-body {  
+body {
   scroll-snap-type: y mandatory;
-  overflow-y: scroll;  
+  overflow-y: scroll;
   margin: 0;
   padding: 0;
   user-select: none;
   font-size: 1rem;
-  font-family: 'Poppins', sans-serif; /* or use any bold, condensed font available */
+  font-family: "Poppins", sans-serif; /* or use any bold, condensed font available */
   min-height: 100%;
 }
 
@@ -18,7 +18,8 @@ body {
 
 /* Keyframes for bottom shake effect */
 @keyframes bottomShake {
-  0%, 100% {
+  0%,
+  100% {
     transform: scale(1) rotate(0deg);
   }
   25% {
@@ -34,11 +35,6 @@ body {
 
 .video-section {
   height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;  
 }
 
 #bg-video {
@@ -48,6 +44,18 @@ body {
   object-fit: cover;
   z-index: -1;
   height: 100vh;
+  width: 100%;
+}
+
+.fallback-main-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  object-fit: cover;
+  z-index: -1;
+  height: 100vh;
+  background-size: cover;
+  width: 100%;
 }
 
 /* Phone Number and Car Icon Styling */
@@ -92,13 +100,12 @@ body {
   color: white;
 }
 
-
 .review-author {
   font-weight: bold;
   color: #333;
 }
 
-#whatsapp-icon {    
+#whatsapp-icon {
   position: fixed;
   height: 100px;
   width: 100px;
@@ -106,7 +113,6 @@ body {
   right: 5px; /* Distance from the right */
   z-index: 1000; /* Ensures the icon is on top of other elements */
 }
-
 
 .reviews-container {
   display: flex;
@@ -168,9 +174,8 @@ body {
   text-align: center;
 }
 
-
-.footer a{
-  margin: 0; 
+.footer a {
+  margin: 0;
   color: white;
 }
 
@@ -185,26 +190,29 @@ body {
 }
 
 /* Styling the main business name */
-.custom-navbar-brand {  
+.custom-navbar-brand {
   font-weight: 700;
   font-size: 2rem;
   letter-spacing: 1px;
-  background: linear-gradient(to right, #1A6BAA, #FF6600); /* Blue to orange gradient */
+  background: linear-gradient(
+    to right,
+    #1a6baa,
+    #ff6600
+  ); /* Blue to orange gradient */
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
-.custom-navbar-brand-footer {  
+.custom-navbar-brand-footer {
   font-weight: 700;
   font-size: 2rem;
-  letter-spacing: 1px;  
+  letter-spacing: 1px;
   color: white;
 }
 
-
 /* Styling the secondary text "Tours and Travels" */
 .custom-navbar-subtext {
-  font-family: 'Poppins', sans-serif; /* same font family */
+  font-family: "Poppins", sans-serif; /* same font family */
   font-weight: 400;
   font-size: 1rem;
   color: #555; /* dark gray, or you can use the same gradient as above */
@@ -212,7 +220,6 @@ body {
   display: block; /* Forces text below main text */
   margin-top: -5px;
 }
-
 
 /* Main section styling */
 .main-section {
@@ -225,7 +232,7 @@ body {
   text-align: center;
 
   background-image: url("main-test.png");
-  background-size: cover; 
+  background-size: cover;
   background-position: center;
   overflow: hidden; /* Hide the overflow for clean edges */
   position: relative;
@@ -233,21 +240,44 @@ body {
 
 /* Typing effect text styling */
 .animated-text {
-  font-family: 'Poppins', sans-serif; /* or a font similar to your logo */
-  font-weight: 700;
-  font-size: 3rem; /* Adjust as needed */
-  color: white;
   display: inline-block;
+  width: 0ch;
+  text-align: center;
+  font-weight: 700;
+  font-size: 2rem; 
+  color: white;
   border-right: 2px solid white;
   white-space: nowrap;
-  overflow: hidden;
-  width: 0; /* Start hidden */
-  animation: typing 4s steps(30, end) forwards, blink-caret 0.75s step-end infinite;
+  word-break: break-word;
+  overflow: hidden;    
+  animation: typing 4s steps(30, end) forwards, blink-caret 0.75s step-end 4s forwards;
 }
+
+
+/* Typing animation */
+@keyframes typing {
+  from {
+    width: 0ch;
+  }
+  to {
+    width: 27ch;
+  }
+}
+
+/* Blinking caret animation */
+@keyframes blink-caret {
+  0%, 50% {
+    border-color: white;
+  }
+  100% {
+    border-color: transparent;
+  }
+}
+
 
 /* Yellow color for "TRAVEL" */
 .yellow-text {
-  color: #FFC300; /* Bright yellow color */
+  color: #ffc300; /* Bright yellow color */
 }
 
 /* Button styling */
@@ -270,25 +300,14 @@ body {
   background-color: #0056b3;
 }
 
-/* Typing animation */
-@keyframes typing {
-  from { width: 0; }
-  to { width: 50%; }
-}
-
-/* Blinking caret animation */
-@keyframes blink-caret {
-  50% { border-color: transparent; }
-}
 
 /* Slide-up animation for button */
 @keyframes slideUp {
   to {
-      opacity: 1;
-      transform: translateY(0);
+    opacity: 1;
+    transform: translateY(0);
   }
 }
-
 
 .align-text-start {
   text-align: start;
@@ -325,14 +344,11 @@ body {
   height: 100px;
 }
 
-
 .footer-logo-img {
   margin-top: 7.5px;
 }
 
-
 @media (max-width: 478px) {
-
   .logo-image {
     width: 80px;
     height: 80px;
@@ -347,9 +363,19 @@ body {
   }
 
   .footer h5 {
-    margin-bottom: 10px; 
+    margin-bottom: 10px;
   }
   .custom-navbar-brand-footer {
     font-size: 1.2rem;
   }
+
+  .animated-text {
+    font-size: 1.2rem;    
+  }
 }
+
+
+.navbar {
+  transition: background-color 0.3s ease; /* Smooth transition */
+}
+

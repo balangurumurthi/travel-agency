@@ -54,26 +54,41 @@
         </ul>
       </div>
 
-
-      <!-- phone -->
-      <div class="ml-md-1 ml-lg-auto">
+      <!-- Phone number div for large screens (displayed inline) -->
+      <div class="d-none d-lg-flex align-items-center">
         <i class="fa-solid fa-phone phone-icon"></i>
-        <span
-          > Book Now:
-          <a href="tel:+918248920740"><strong>+91 82489 20740</strong></a></span
-        >
+        <span>
+          Book Now:
+          <a href="tel:+918248920740"><strong>+91 82489 20740</strong></a>
+        </span>
       </div>
+
+      <!-- Phone number div for smaller screens (displayed below logo) -->
+      <div class="d-lg-none w-100 text-start mt-2">
+        <i class="fa-solid fa-phone phone-icon"></i>
+        <span>
+          Book Now:
+          <a href="tel:+918248920740"><strong>+91 82489 20740</strong></a>
+        </span>
+      </div>
+
     </nav>
 
     <!-- Main Section with Video Background -->
     <main
-      class="video-section d-flex align-items-center justify-content-center"
+      class="d-flex flex-column align-items-center justify-content-center video-section"
       id="main"
     >
-      <video autoplay muted loop id="bg-video" width="100%">
+      <!-- <video autoplay muted loop id="bg-video" width="100%">
         <source src="main-compressed.mp4" type="video/mp4" />
         Your browser does not support HTML5 video.
-      </video>
+      </video> -->
+      <img
+        id="fallbackImage"
+        src="main.jpg"
+        class="fallback-main-image"
+        alt="main-image"
+      />
       <h1 class="animated-text">
         <span class="yellow-text">TRAVEL</span> LIKE NEVER BEFORE!
       </h1>
@@ -258,10 +273,15 @@
     <!-- about us -->
     <footer id="footer" class="footer mt-5 pt-5 pb-3 pb-lg-0">
       <div class="container">
-        <div class="row align-text-start ">
+        <div class="row align-text-start">
           <!-- logo and company name -->
           <div class="col-sm-12 col-lg-5 d-flex mb-5">
-            <img src="logo-new.png" width="50" height="50" class="footer-logo-img" />
+            <img
+              src="logo-new.png"
+              width="50"
+              height="50"
+              class="footer-logo-img"
+            />
             <h5 class="custom-navbar-brand-footer ml-3">
               Madurai Murugan
               <span class="custom-navbar-subtext text-light pt-1"
@@ -281,7 +301,9 @@
           </div>
 
           <!-- contact us -->
-          <div class="d-flex flex-column align-items-start col-sm-12 col-lg-4 mb-5">
+          <div
+            class="d-flex flex-column align-items-start col-sm-12 col-lg-4 mb-5"
+          >
             <h5 class="mb-3">Visit us Today</h5>
 
             <!-- address -->
@@ -363,6 +385,53 @@
           navbar.classList.remove("nav-bar-background-white");
         }
       };
+    </script>
+
+    <!-- load video async -->
+    <script>
+      // Function to asynchronously load the video
+      function loadVideoAsync() {
+        const videoUrl = "main-compressed.mp4";
+        const video = document.createElement("video");
+
+        video.src = videoUrl;
+        video.id = "bg-video";
+        video.autoplay = true;
+        video.loop = true;
+        video.muted = true;
+
+        // Wait for video to be ready to play before replacing the image
+        video.oncanplaythrough = function () {
+          const mediaContainer = document.getElementById("main");
+          const fallbackImage = document.getElementById("fallbackImage");
+
+          // Replace the image with the video
+          if (mediaContainer && fallbackImage) {
+            mediaContainer.replaceChild(video, fallbackImage);
+          }
+        };
+
+        // Start loading the video in the background
+        video.load();
+      }
+
+      // Trigger the asynchronous video load after the page has loaded
+      document.addEventListener("DOMContentLoaded", loadVideoAsync);
+    </script>
+    <script>
+      $(document).ready(function () {
+        $("#navbarSupportedContent").on("show.bs.collapse", function () {
+          if ($(window).width() < 992) {
+            $(".navbar").addClass("nav-bar-background-white");
+          }
+        });
+
+        $("#navbarSupportedContent").on("hide.bs.collapse", function () {
+          if ($(window).width() < 992) {
+            $(".navbar").removeClass("nav-bar-background-white");
+          }
+        });
+      });
     </script>
   </body>
 </html>
