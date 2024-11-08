@@ -8,9 +8,84 @@
       content="width=device-width, initial-scale=1, shrink-to-fit=no"
     />
     <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
 
-    <link rel="stylesheet" href="style.css" />
     <title>Madurai Murugan Tours and Travels</title>
+
+    <!-- favicons -->
+    <link
+      rel="apple-touch-icon"
+      sizes="57x57"
+      href="fav/apple-icon-57x57.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="60x60"
+      href="fav/apple-icon-60x60.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="72x72"
+      href="fav/apple-icon-72x72.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="76x76"
+      href="fav/apple-icon-76x76.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="114x114"
+      href="fav/apple-icon-114x114.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="120x120"
+      href="fav/apple-icon-120x120.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="144x144"
+      href="fav/apple-icon-144x144.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="152x152"
+      href="fav/apple-icon-152x152.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="fav/apple-icon-180x180.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="192x192"
+      href="fav/android-icon-192x192.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="fav/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="96x96"
+      href="fav/favicon-96x96.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="fav/favicon-16x16.png"
+    />
+    <link rel="manifest" href="fav/manifest.json" />
+    <meta name="msapplication-TileColor" content="#ffffff" />
+    <meta name="msapplication-TileImage" content="fav/ms-icon-144x144.png" />
+    <meta name="theme-color" content="#ffffff" />
   </head>
   <body>
     <div id="home"></div>
@@ -19,7 +94,7 @@
     <nav class="navbar navbar-expand-lg navbar-light sticky-top">
       <div class="d-flex align-items-center w-sm-25">
         <a class="ml-2" href="#home"
-          ><img src="logo.png" class="logo-image"
+          ><img src="assets/images/logo.png" class="logo-image"
         /></a>
         <div class="custom-navbar-brand">
           Madurai Murugan
@@ -57,7 +132,7 @@
         <i class="fa-solid fa-phone phone-icon"></i>
         <span>
           Book Now:
-          <a href="tel:+918248920740"><strong>+91 82489 20740</strong></a>
+          <a href="tel:+918608153862"><strong>+91 86081 53862</strong></a>
         </span>
       </div>
 
@@ -66,7 +141,7 @@
         <i class="fa-solid fa-phone phone-icon"></i>
         <span>
           Book Now:
-          <a href="tel:+918248920740"><strong>+91 82489 20740</strong></a>
+          <a href="tel:+918608153862"><strong>+91 86081 53862</strong></a>
         </span>
       </div>
     </nav>
@@ -82,7 +157,7 @@
       </video> -->
       <img
         id="fallbackImage"
-        src="main.jpg"
+        src="assets/images/main.jpg"
         class="fallback-main-image"
         alt="main-image"
       />
@@ -90,7 +165,7 @@
         <span class="yellow-text">TRAVEL</span> LIKE NEVER BEFORE!
       </h1>
       <a href="#service"
-        ><button class="explore-button">Book Now &rarr;</button></a
+        ><button class="explore-button">Explore &rarr;</button></a
       >
     </main>
 
@@ -99,14 +174,17 @@
       <div class="container">
         <h2 class="text-center mb-4">Our Services</h2>
         <div class="row">
-          <div class="col-md-4">
-            <div class="card mb-4">
+          <!-- car1 -->
+          <div class="col-12 col-md-6 col-lg-6 col-xl-4 d-flex">
+            <div class="card mb-4 flex-fill">
               <img
-                src="c1.webp"
+                src="assets/images/c1.png"
                 class="card-img-top"
                 alt="Tempo Traveller AC 18 Seater"
               />
-              <div class="card-body text-start">
+              <div
+                class="card-body text-start d-flex flex-column justify-content-between"
+              >
                 <h5 class="card-title">Tempo Traveller AC</h5>
                 <p class="card-text">
                   <strong>Seat Capacity:</strong> 18<br />
@@ -127,14 +205,17 @@
               </div>
             </div>
           </div>
-          <div class="col-md-4">
-            <div class="card mb-4">
+          <!-- car2 -->
+          <div class="col-12 col-md-6 col-lg-6 col-xl-4 d-flex">
+            <div class="card mb-4 flex-fill">
               <img
-                src="c2.png"
+                src="assets/images/c2.png"
                 class="card-img-top"
                 alt="Tempo traveller 12 seater AC"
               />
-              <div class="card-body text-start">
+              <div
+                class="card-body text-start d-flex flex-column justify-content-between"
+              >
                 <h5 class="card-title">Tempo Traveller AC</h5>
                 <p class="card-text">
                   <strong>Seat Capacity:</strong> 12<br />
@@ -147,16 +228,25 @@
                     <li><strong>Fuel Charge:</strong> ₹18/km</li>
                   </ul>
                 </div>
-                <button class="btn btn-success mt-2 w-100">
-                  <i class="fa-solid fa-phone phone-icon mr-3"></i>Book Now
-                </button>
+                <a href="#bookNow">
+                  <button class="btn btn-success mt-2 w-100">
+                    <i class="fa-solid fa-phone phone-icon mr-3"></i>Book Now
+                  </button></a
+                >
               </div>
             </div>
           </div>
-          <div class="col-md-4">
-            <div class="card mb-4">
-              <img src="c3.png" class="card-img-top" alt="Renault Triber" />
-              <div class="card-body text-start">
+          <!-- car3 -->
+          <div class="col-12 col-md-6 col-lg-6 col-xl-4 d-flex">
+            <div class="card mb-4 flex-fill">
+              <img
+                src="assets/images/c3.png"
+                class="card-img-top"
+                alt="Renault Triber"
+              />
+              <div
+                class="card-body text-start d-flex flex-column justify-content-between"
+              >
                 <h5 class="card-title">Innova Hycross</h5>
                 <p class="card-text"><strong>Seat Capacity:</strong> 8<br /></p>
                 <div class="pricing-details">
@@ -168,20 +258,25 @@
                     <li><strong>Hours Package (8hrs 80km):</strong> ₹4500</li>
                   </ul>
                 </div>
-                <button class="btn btn-success mt-2 w-100">
-                  <i class="fa-solid fa-phone phone-icon mr-3"></i>Book Now
-                </button>
+                <a href="#bookNow">
+                  <button class="btn btn-success mt-2 w-100">
+                    <i class="fa-solid fa-phone phone-icon mr-3"></i>Book Now
+                  </button></a
+                >
               </div>
             </div>
           </div>
-          <div class="col-md-4">
-            <div class="card mb-4">
+          <!-- car4 -->
+          <div class="col-12 col-md-6 col-lg-6 col-xl-4 d-flex">
+            <div class="card mb-4 flex-fill">
               <img
-                src="c4.png"
+                src="assets/images/c4.png"
                 class="card-img-top"
                 alt="Etios or Equivalent"
               />
-              <div class="card-body text-start">
+              <div
+                class="card-body text-start d-flex flex-column justify-content-between"
+              >
                 <h5 class="card-title">Etios or Equivalent</h5>
                 <p class="card-text"><strong>Seat Capacity:</strong> 4<br /></p>
                 <div class="pricing-details">
@@ -193,20 +288,25 @@
                     <li><strong>Hours Package (8hrs 80km):</strong> ₹2600</li>
                   </ul>
                 </div>
-                <button class="btn btn-success mt-2 w-100">
-                  <i class="fa-solid fa-phone phone-icon mr-3"></i>Book Now
-                </button>
+                <a href="#bookNow">
+                  <button class="btn btn-success mt-2 w-100">
+                    <i class="fa-solid fa-phone phone-icon mr-3"></i>Book Now
+                  </button></a
+                >
               </div>
             </div>
           </div>
-          <div class="col-md-4">
-            <div class="card mb-4">
+          <!-- car5 -->
+          <div class="col-12 col-md-6 col-lg-6 col-xl-4 d-flex">
+            <div class="card mb-4 flex-fill">
               <img
-                src="c5.png"
+                src="assets/images/c5.png"
                 class="card-img-top"
                 alt="Innova or Equivalent"
               />
-              <div class="card-body text-start">
+              <div
+                class="card-body text-start d-flex flex-column justify-content-between"
+              >
                 <h5 class="card-title">Innova or Equivalent</h5>
                 <p class="card-text"><strong>Seat Capacity:</strong> 7<br /></p>
                 <div class="pricing-details">
@@ -218,16 +318,25 @@
                     <li><strong>Hours Package (8hrs 80km):</strong> ₹3200</li>
                   </ul>
                 </div>
-                <button class="btn btn-success mt-2 w-100">
-                  <i class="fa-solid fa-phone phone-icon mr-3"></i>Book Now
-                </button>
+                <a href="#bookNow">
+                  <button class="btn btn-success mt-2 w-100">
+                    <i class="fa-solid fa-phone phone-icon mr-3"></i>Book Now
+                  </button></a
+                >
               </div>
             </div>
           </div>
-          <div class="col-md-4">
-            <div class="card mb-4">
-              <img src="c6.png" class="card-img-top" alt="Innova Crysta" />
-              <div class="card-body text-start">
+          <!-- car6 -->
+          <div class="col-12 col-md-6 col-lg-6 col-xl-4 d-flex">
+            <div class="card mb-4 flex-fill">
+              <img
+                src="assets/images/c6.png"
+                class="card-img-top"
+                alt="Innova Crysta"
+              />
+              <div
+                class="card-body text-start d-flex flex-column justify-content-between"
+              >
                 <h5 class="card-title">Innova Crysta</h5>
                 <p class="card-text"><strong>Seat Capacity:</strong> 4<br /></p>
                 <div class="pricing-details">
@@ -239,9 +348,11 @@
                     <li><strong>Hours Package (8hrs 80km):</strong> ₹4000</li>
                   </ul>
                 </div>
-                <button class="btn btn-success mt-2 w-100">
-                  <i class="fa-solid fa-phone phone-icon mr-3"></i>Book Now
-                </button>
+                <a href="#bookNow">
+                  <button class="btn btn-success mt-2 w-100">
+                    <i class="fa-solid fa-phone phone-icon mr-3"></i>Book Now
+                  </button></a
+                >
               </div>
             </div>
           </div>
@@ -332,7 +443,11 @@
             <div class="reviews-container">
               <div class="review">
                 <div class="user-info">
-                  <img src="u1.png" alt="User Icon" class="user-icon" />
+                  <img
+                    src="assets/images/u1.png"
+                    alt="User Icon"
+                    class="user-icon"
+                  />
                   <div class="user-name">Bagya Natarajan</div>
                 </div>
                 <div class="rating">★★★★★</div>
@@ -344,7 +459,11 @@
 
               <div class="review">
                 <div class="user-info">
-                  <img src="u2.png" alt="User Icon" class="user-icon" />
+                  <img
+                    src="assets/images/u2.png"
+                    alt="User Icon"
+                    class="user-icon"
+                  />
                   <div class="user-name">Muthu Selvam</div>
                 </div>
                 <div class="rating">★★★★★</div>
@@ -357,7 +476,11 @@
 
               <div class="review">
                 <div class="user-info">
-                  <img src="u3.png" alt="User Icon" class="user-icon" />
+                  <img
+                    src="assets/images/u3.png"
+                    alt="User Icon"
+                    class="user-icon"
+                  />
                   <div class="user-name">Vidhya Sathishram</div>
                 </div>
                 <div class="rating">★★★★★</div>
@@ -373,7 +496,11 @@
             <div class="reviews-container">
               <div class="review">
                 <div class="user-info">
-                  <img src="u4.png" alt="User Icon" class="user-icon" />
+                  <img
+                    src="assets/images/u4.png"
+                    alt="User Icon"
+                    class="user-icon"
+                  />
                   <div class="user-name">Baby Vel</div>
                 </div>
                 <div class="rating">★★★★★</div>
@@ -385,7 +512,11 @@
 
               <div class="review">
                 <div class="user-info">
-                  <img src="u5.png" alt="User Icon" class="user-icon" />
+                  <img
+                    src="assets/images/u5.png"
+                    alt="User Icon"
+                    class="user-icon"
+                  />
                   <div class="user-name">Raji Solaiyappan</div>
                 </div>
                 <div class="rating">★★★★★</div>
@@ -398,7 +529,11 @@
 
               <div class="review">
                 <div class="user-info">
-                  <img src="u6.png" alt="User Icon" class="user-icon" />
+                  <img
+                    src="assets/images/u6.png"
+                    alt="User Icon"
+                    class="user-icon"
+                  />
                   <div class="user-name">Johny Deepak</div>
                 </div>
                 <div class="rating">★★★★★</div>
@@ -455,7 +590,11 @@
             <div class="reviews-container">
               <div class="review">
                 <div class="user-info">
-                  <img src="u1.png" alt="User Icon" class="user-icon" />
+                  <img
+                    src="assets/images/u1.png"
+                    alt="User Icon"
+                    class="user-icon"
+                  />
                   <div class="user-name">Bagya Natarajan</div>
                 </div>
                 <div class="rating">★★★★★</div>
@@ -470,7 +609,11 @@
             <div class="reviews-container">
               <div class="review">
                 <div class="user-info">
-                  <img src="u2.png" alt="User Icon" class="user-icon" />
+                  <img
+                    src="assets/images/u2.png"
+                    alt="User Icon"
+                    class="user-icon"
+                  />
                   <div class="user-name">Muthu Selvam</div>
                 </div>
                 <div class="rating">★★★★★</div>
@@ -486,7 +629,11 @@
             <div class="reviews-container">
               <div class="review">
                 <div class="user-info">
-                  <img src="u3.png" alt="User Icon" class="user-icon" />
+                  <img
+                    src="assets/images/u3.png"
+                    alt="User Icon"
+                    class="user-icon"
+                  />
                   <div class="user-name">Vidhya Sathishram</div>
                 </div>
                 <div class="rating">★★★★★</div>
@@ -501,7 +648,11 @@
             <div class="reviews-container">
               <div class="review">
                 <div class="user-info">
-                  <img src="u4.png" alt="User Icon" class="user-icon" />
+                  <img
+                    src="assets/images/u4.png"
+                    alt="User Icon"
+                    class="user-icon"
+                  />
                   <div class="user-name">Baby Vel</div>
                 </div>
                 <div class="rating">★★★★★</div>
@@ -516,7 +667,11 @@
             <div class="reviews-container">
               <div class="review">
                 <div class="user-info">
-                  <img src="u5.png" alt="User Icon" class="user-icon" />
+                  <img
+                    src="assets/images/u5.png"
+                    alt="User Icon"
+                    class="user-icon"
+                  />
                   <div class="user-name">Raji Solaiyappan</div>
                 </div>
                 <div class="rating">★★★★★</div>
@@ -532,7 +687,11 @@
             <div class="reviews-container">
               <div class="review">
                 <div class="user-info">
-                  <img src="u6.png" alt="User Icon" class="user-icon" />
+                  <img
+                    src="assets/images/u6.png"
+                    alt="User Icon"
+                    class="user-icon"
+                  />
                   <div class="user-name">Johny Deepak</div>
                 </div>
                 <div class="rating">★★★★★</div>
@@ -590,12 +749,12 @@
           <!-- logo and company name -->
           <div class="col-sm-12 col-lg-5 d-flex mb-5">
             <img
-              src="logo.png"
+              src="assets/images/logo.png"
               width="50"
               height="50"
-              class="footer-logo-img"
+              class="logo-image"
             />
-            <h5 class="custom-navbar-brand-footer ml-3">
+            <h5 class="custom-navbar-brand-footer ml-3 mt-3">
               Madurai Murugan
               <span class="custom-navbar-subtext text-light pt-1"
                 >Tours and Travels</span
@@ -608,8 +767,8 @@
             <h5 class="mb-3">Navigation</h5>
 
             <div class="d-flex flex-column">
-              <a href="#home">Home</a>
-              <a href="#service">Services</a>
+              <a class="mb-2" href="#home">Home</a>
+              <a class="mb-2" href="#service">Services</a>
             </div>
           </div>
 
@@ -629,7 +788,7 @@
             <!-- phone number -->
             <p class="mb-2">
               <i class="fa-solid fa-phone"></i>
-              <a href="tel:+918248920740">+91 82489 20740</a>
+              <a href="tel:+918608153862">+91 86081 53862</a>
             </p>
 
             <!-- email -->
@@ -652,7 +811,7 @@
 
     <!-- WhatsApp Icon -->
     <a
-      href="https://wa.me/8248920740?text=Hello!%20I%20would%20like%20to%20inquire%20about..."
+      href="https://wa.me/+918608153862?text=Hi!%20I%27m%20interested%20in%20your%20services%20and%20would%20love%20to%20get%20more%20information.%20Thank%20you!"
       target="_blank"
       id="whatsapp-icon"
     >
@@ -683,7 +842,7 @@
     ></script>
 
     <!--  scroll smoothly -->
-    <script>      
+    <script>
       document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
         // Check if the anchor is not part of the carousel (optional exclusion)
         if (!anchor.closest(".carousel")) {
@@ -718,13 +877,18 @@
     <script>
       window.onscroll = function () {
         const navbar = document.querySelector(".navbar");
+        const navbarToggle = document.getElementById("navbarSupportedContent");
+
         if (window.scrollY > 50) {
-          // Adjust this value based on when you want to trigger the class change
+          // Add classes when scrolled past 50px
           navbar.classList.add("nav-bar-background-white");
           navbar.classList.add("shadow");
         } else {
-          navbar.classList.remove("nav-bar-background-white");
-          navbar.classList.remove("shadow");
+          // Only remove classes if the menu is not open
+          if (!navbarToggle.classList.contains("show")) {
+            navbar.classList.remove("nav-bar-background-white");
+            navbar.classList.remove("shadow");
+          }
         }
       };
     </script>
@@ -733,7 +897,7 @@
     <script>
       // Function to asynchronously load the video
       function loadVideoAsync() {
-        const videoUrl = "main-video.mp4";
+        const videoUrl = "assets/videos/main-video.mp4";
         const video = document.createElement("video");
 
         video.src = videoUrl;
@@ -829,6 +993,5 @@
         window.open(whatsappUrl, "_blank");
       }
     </script>
-
   </body>
 </html>
