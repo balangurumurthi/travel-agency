@@ -198,7 +198,10 @@
                   </ul>
                 </div>
                 <a href="#bookNow"
-                  ><button class="btn btn-success mt-2 w-100" id="bookTempTraveller18">
+                  ><button
+                    class="btn btn-success mt-2 w-100"
+                    id="bookTempTraveller18"
+                  >
                     <i class="fa-solid fa-phone phone-icon mr-3"></i>Book Now
                   </button></a
                 >
@@ -229,7 +232,10 @@
                   </ul>
                 </div>
                 <a href="#bookNow">
-                  <button class="btn btn-success mt-2 w-100" id="bookTempTraveller12">
+                  <button
+                    class="btn btn-success mt-2 w-100"
+                    id="bookTempTraveller12"
+                  >
                     <i class="fa-solid fa-phone phone-icon mr-3"></i>Book Now
                   </button></a
                 >
@@ -259,7 +265,10 @@
                   </ul>
                 </div>
                 <a href="#bookNow">
-                  <button class="btn btn-success mt-2 w-100" id="bookInnovaHycross">
+                  <button
+                    class="btn btn-success mt-2 w-100"
+                    id="bookInnovaHycross"
+                  >
                     <i class="fa-solid fa-phone phone-icon mr-3"></i>Book Now
                   </button></a
                 >
@@ -349,7 +358,10 @@
                   </ul>
                 </div>
                 <a href="#bookNow">
-                  <button class="btn btn-success mt-2 w-100" id="bookInnovaCrysta">
+                  <button
+                    class="btn btn-success mt-2 w-100"
+                    id="bookInnovaCrysta"
+                  >
                     <i class="fa-solid fa-phone phone-icon mr-3"></i>Book Now
                   </button></a
                 >
@@ -974,23 +986,24 @@
       function sendWhatsAppMessage() {
         const name = document.getElementById("name").value;
         const phone = document.getElementById("phone").value;
-        const carType = document.getElementById("carType").value;
+        const carType = document.getElementById("carType").value || "NA";
         const numTravelers = document.getElementById("numTravelers").value;
         const startPlace = document.getElementById("startPlace").value;
         const endPlace = document.getElementById("endPlace").value;
         const date = document.getElementById("date").value;
-        const notes = document.getElementById("notes").value || "N/A";
+        const notes = document.getElementById("notes").value || "NA";
 
         // Create the message
-        const message = `Booking Details:
-    Name: ${name}
-    Phone: ${phone}
-    Car Type: ${carType}
-    Number of Travelers: ${numTravelers}
-    Start Place: ${startPlace}
-    End Place: ${endPlace}
-    Date: ${date}
-    Additional Notes: ${notes}`;
+        const message = `Greetings, I am interested in booking with the following details:\n
+Booking Details:\n
+Name: ${name} 
+Phone: ${phone} 
+Car Type: ${carType} 
+Number of Travelers: ${numTravelers} 
+Start Place: ${capitalize(startPlace)} 
+End Place: ${capitalize(endPlace)} 
+Date: ${date} 
+Additional Notes: ${notes}`;
 
         if (!name) {
           alert("Please enter your name.");
@@ -1009,43 +1022,50 @@
         // Open WhatsApp with the pre-filled message
         window.open(whatsappUrl, "_blank");
       }
+
+      // Function to capitalize the first letter of each word
+      function capitalize(str) {
+        return str.charAt(0).toUpperCase() + str.slice(1).toLowerCase();
+      }
     </script>
 
     <!-- update car type -->
     <script>
       document
         .getElementById("bookTempTraveller18")
-        .addEventListener("click", function () {          
-          document.getElementById("carType").value = "Tempo Traveller AC 18 Seater";
+        .addEventListener("click", function () {
+          document.getElementById("carType").value =
+            "Tempo Traveller AC 18 Seater";
         });
-        document
+      document
         .getElementById("bookTempTraveller12")
-        .addEventListener("click", function () {          
-          document.getElementById("carType").value = "Tempo Traveller AC 12 Seater";
-        });        
+        .addEventListener("click", function () {
+          document.getElementById("carType").value =
+            "Tempo Traveller AC 12 Seater";
+        });
 
-        document
+      document
         .getElementById("bookInnovaHycross")
-        .addEventListener("click", function () {          
+        .addEventListener("click", function () {
           document.getElementById("carType").value = "Innova Hycross";
-        });     
-        
-        document
+        });
+
+      document
         .getElementById("bookEtios")
-        .addEventListener("click", function () {          
+        .addEventListener("click", function () {
           document.getElementById("carType").value = "Etios or Equivalent";
         });
-        document
+      document
         .getElementById("bookInnova")
-        .addEventListener("click", function () {          
+        .addEventListener("click", function () {
           document.getElementById("carType").value = "Innova or Equivalent";
-        });        
+        });
 
-        document
+      document
         .getElementById("bookInnovaCrysta")
-        .addEventListener("click", function () {          
+        .addEventListener("click", function () {
           document.getElementById("carType").value = "Innova Crysta";
-        });             
+        });
     </script>
   </body>
 </html>
