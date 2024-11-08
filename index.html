@@ -198,7 +198,7 @@
                   </ul>
                 </div>
                 <a href="#bookNow"
-                  ><button class="btn btn-success mt-2 w-100">
+                  ><button class="btn btn-success mt-2 w-100" id="bookTempTraveller18">
                     <i class="fa-solid fa-phone phone-icon mr-3"></i>Book Now
                   </button></a
                 >
@@ -229,7 +229,7 @@
                   </ul>
                 </div>
                 <a href="#bookNow">
-                  <button class="btn btn-success mt-2 w-100">
+                  <button class="btn btn-success mt-2 w-100" id="bookTempTraveller12">
                     <i class="fa-solid fa-phone phone-icon mr-3"></i>Book Now
                   </button></a
                 >
@@ -242,7 +242,7 @@
               <img
                 src="assets/images/c3.png"
                 class="card-img-top"
-                alt="Renault Triber"
+                alt="Innova Hycross"
               />
               <div
                 class="card-body text-start d-flex flex-column justify-content-between"
@@ -259,7 +259,7 @@
                   </ul>
                 </div>
                 <a href="#bookNow">
-                  <button class="btn btn-success mt-2 w-100">
+                  <button class="btn btn-success mt-2 w-100" id="bookInnovaHycross">
                     <i class="fa-solid fa-phone phone-icon mr-3"></i>Book Now
                   </button></a
                 >
@@ -289,7 +289,7 @@
                   </ul>
                 </div>
                 <a href="#bookNow">
-                  <button class="btn btn-success mt-2 w-100">
+                  <button class="btn btn-success mt-2 w-100" id="bookEtios">
                     <i class="fa-solid fa-phone phone-icon mr-3"></i>Book Now
                   </button></a
                 >
@@ -319,7 +319,7 @@
                   </ul>
                 </div>
                 <a href="#bookNow">
-                  <button class="btn btn-success mt-2 w-100">
+                  <button class="btn btn-success mt-2 w-100" id="bookInnova">
                     <i class="fa-solid fa-phone phone-icon mr-3"></i>Book Now
                   </button></a
                 >
@@ -349,7 +349,7 @@
                   </ul>
                 </div>
                 <a href="#bookNow">
-                  <button class="btn btn-success mt-2 w-100">
+                  <button class="btn btn-success mt-2 w-100" id="bookInnovaCrysta">
                     <i class="fa-solid fa-phone phone-icon mr-3"></i>Book Now
                   </button></a
                 >
@@ -376,7 +376,21 @@
             </div>
             <div class="form-group">
               <label for="carType">Car Type</label>
-              <input type="text" class="form-control" id="carType" required />
+              <select class="form-control" id="carType">
+                <option value="">Select</option>
+                <option value="Tempo Traveller AC 18 Seater">
+                  Tempo Traveller AC 18 Seater
+                </option>
+                <option value="Tempo Traveller AC 12 Seater">
+                  Tempo Traveller AC 12 Seater
+                </option>
+                <option value="Innova Hycross">Innova Hycross</option>
+                <option value="Etios or Equivalent">Etios or Equivalent</option>
+                <option value="Innova or Equivalent">
+                  Innova or Equivalent
+                </option>
+                <option value="Innova Crysta">Innova Crysta</option>
+              </select>
             </div>
             <div class="form-group">
               <label for="numTravelers">Number of Travelers</label>
@@ -805,8 +819,11 @@
       <!--  copy right -->
       <p class="mb-lg-0">
         ©2024 Copyright Madurai Murugan Tours and Travels.&nbsp;All Rights
-        Reserved.&nbsp;Made with ❤️ by <a href="https://github.com/balangurumurthi" target="_blank"><u>Balan Gurumurthi</u></a>
-      </p>      
+        Reserved.&nbsp;Made with ❤️ by
+        <a href="https://github.com/balangurumurthi" target="_blank"
+          ><u>Balan Gurumurthi</u></a
+        >
+      </p>
     </footer>
 
     <!-- WhatsApp Icon -->
@@ -992,6 +1009,43 @@
         // Open WhatsApp with the pre-filled message
         window.open(whatsappUrl, "_blank");
       }
+    </script>
+
+    <!-- update car type -->
+    <script>
+      document
+        .getElementById("bookTempTraveller18")
+        .addEventListener("click", function () {          
+          document.getElementById("carType").value = "Tempo Traveller AC 18 Seater";
+        });
+        document
+        .getElementById("bookTempTraveller12")
+        .addEventListener("click", function () {          
+          document.getElementById("carType").value = "Tempo Traveller AC 12 Seater";
+        });        
+
+        document
+        .getElementById("bookInnovaHycross")
+        .addEventListener("click", function () {          
+          document.getElementById("carType").value = "Innova Hycross";
+        });     
+        
+        document
+        .getElementById("bookEtios")
+        .addEventListener("click", function () {          
+          document.getElementById("carType").value = "Etios or Equivalent";
+        });
+        document
+        .getElementById("bookInnova")
+        .addEventListener("click", function () {          
+          document.getElementById("carType").value = "Innova or Equivalent";
+        });        
+
+        document
+        .getElementById("bookInnovaCrysta")
+        .addEventListener("click", function () {          
+          document.getElementById("carType").value = "Innova Crysta";
+        });             
     </script>
   </body>
 </html>
