@@ -8,6 +8,7 @@ body {
   font-size: 1rem;
   font-family: "Poppins", sans-serif; /* or use any bold, condensed font available */
   min-height: 100%;
+  background-color: #f9f9f9;
 }
 
 .phone-icon {
@@ -34,8 +35,10 @@ body {
 }
 
 .video-section {
-  height: 100vh;
+  height: 100vh;  
 }
+
+
 
 #bg-video {
   position: absolute;
@@ -179,10 +182,6 @@ body {
   color: white;
 }
 
-.car-list {
-  background-color: #f9f9f9;
-  padding: 40px 0;
-}
 
 .card-img-top {
   height: 200px; /* Adjust height for uniformity */
@@ -375,7 +374,28 @@ body {
 }
 
 
-.navbar {
-  transition: background-color 0.3s ease; /* Smooth transition */
+.pricing-details {
+  background-color: #f9f9f9; 
+  padding: 15px;
+  border-radius: 5px;
+  margin-top: 15px;
 }
 
+.pricing-details p {
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.pricing-details ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.pricing-details li {
+  margin-bottom: 8px;
+  font-size: 1rem;
+}
+
+.pricing-details strong {
+  font-weight: bold;
+}

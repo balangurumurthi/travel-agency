@@ -1,0 +1,2 @@
+white background vanishes after click toggle button then scroll down and up
+logo looks smaller on footer
