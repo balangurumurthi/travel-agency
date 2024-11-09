@@ -96,7 +96,7 @@
         <a class="ml-2" href="#home"
           ><img src="assets/images/logo.png" class="logo-image"
         /></a>
-        <div class="custom-navbar-brand">
+        <div class="custom-navbar-brand" id="navLogoText">
           Madurai Murugan
           <span class="custom-navbar-subtext">Tours and Travels</span>
         </div>
@@ -114,12 +114,15 @@
       </button>
 
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav ml-auto mr-5">
-          <li class="nav-item active">
-            <a class="nav-link" href="#home">Home</a>
+        <ul class="navbar-nav ml-auto mr-5" id="navigationMenu">
+          <li class="nav-item">
+            <a class="nav-link active-nav" href="#home">Home</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#service">Services</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#traffic-table">Pricing</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#footer">Contact</a>
@@ -128,20 +131,30 @@
       </div>
 
       <!-- Phone number div for large screens (displayed inline) -->
-      <div class="d-none d-lg-flex align-items-center">
+      <div
+        class="d-none d-lg-flex align-items-center"
+        id="navBookNowPhoneContainer"
+      >
         <i class="fa-solid fa-phone phone-icon"></i>
         <span>
           Book Now:
-          <a href="tel:+918608153862"><strong>+91 86081 53862</strong></a>
+          <a href="tel:+918608153862" id="navBookNowPhoneNumber"
+            ><strong>+91 86081 53862</strong></a
+          >
         </span>
       </div>
 
       <!-- Phone number div for smaller screens (displayed below logo) -->
-      <div class="d-lg-none w-100 text-start mt-2">
+      <div
+        class="d-lg-none w-100 text-start mt-2"
+        id="navBookNowPhoneSmContainer"
+      >
         <i class="fa-solid fa-phone phone-icon"></i>
         <span>
           Book Now:
-          <a href="tel:+918608153862"><strong>+91 86081 53862</strong></a>
+          <a href="tel:+918608153862" id="smNavBookNowPhoneNumber"
+            ><strong>+91 86081 53862</strong></a
+          >
         </span>
       </div>
     </nav>
@@ -227,7 +240,9 @@
                     <li><strong>Above 300km:</strong> ₹26/km</li>
                     <li><strong>Below 300km:</strong> ₹3000/day</li>
                     <li><strong>Fuel Charge:</strong> ₹18/km</li>
-                    <li><strong>Hours Package (Include 8hrs 80km):</strong> ₹4500</li>
+                    <li>
+                      <strong>Hours Package (Include 8hrs 80km):</strong> ₹4500
+                    </li>
                   </ul>
                 </div>
                 <a href="#bookNow">
@@ -370,6 +385,458 @@
                     <i class="fa-solid fa-phone phone-icon mr-3"></i>Book Now
                   </button></a
                 >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- traffic table -->
+    <section class="mb-5" id="traffic-table">
+      <div class="table-container container">
+        <h2 class="text-center mb-4">Traffic Comparison</h2>
+        <table
+          class="table table-striped table-hover table-bordered text-app-primary"
+        >
+          <thead class="app-white-text-color bg-app-primary">
+            <tr>
+              <th>Vehicle</th>
+              <th>Seat Capacity</th>
+              <th>Above 300km Rate</th>
+              <th>Below 300km Day Rent</th>
+              <th>Fuel Charge (per km)</th>
+              <th>Hourly Rental Package</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Innova Crysta</td>
+              <td>7</td>
+              <td>22 rs/km</td>
+              <td>2600</td>
+              <td>18 rs/km</td>
+              <td>8 hrs 80 km = 4500</td>
+            </tr>
+            <tr>
+              <td>Innova Hycross</td>
+              <td>7</td>
+              <td>26 rs/km</td>
+              <td>3000</td>
+              <td>18 rs/km</td>
+              <td>8 hrs 80 km = 4500</td>
+            </tr>
+            <tr>
+              <td>Innova or Equivalent</td>
+              <td>7</td>
+              <td>18 rs/km</td>
+              <td>2200</td>
+              <td>12 rs/km</td>
+              <td>8 hrs 80 km = 3200</td>
+            </tr>
+            <tr>
+              <td>Etios or Equivalent</td>
+              <td>4</td>
+              <td>14 rs/km</td>
+              <td>1600</td>
+              <td>10 rs/km</td>
+              <td>8 hrs 80 km = 2600</td>
+            </tr>
+            <tr>
+              <td>Tempo Traveller A/C</td>
+              <td>12</td>
+              <td>23 rs/km</td>
+              <td>2800</td>
+              <td>18 rs/km</td>
+              <td>8 hrs 80 km = 4500</td>
+            </tr>
+            <tr>
+              <td>Tempo Traveller 18 Seater A/C</td>
+              <td>18</td>
+              <td>29 rs/km</td>
+              <td>3800</td>
+              <td>18 rs/km</td>
+              <td>8 hrs 80 km = 4500</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="mb-5" id="faq">
+      <h2 class="text-center mb-4">Frequently Asked Questions</h2>
+      <div class="container">
+        <div class="accordion row" id="faqAccordion">
+          <div class="col-md-6">
+            <div class="card">
+              <div
+                class="card-header d-flex justify-content-between align-items-center"
+                id="headingOne"
+              >
+                <div class="faq-question">What services do you offer?</div>
+                <i class="fa fa-chevron-down"></i>
+              </div>
+              <div id="collapseOne" class="collapse">
+                <div class="card-body">
+                  Madurai Murugan Tours and Travels offers a range of travel
+                  services, including...
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6">
+            <div class="card">
+              <div
+                class="card-header d-flex justify-content-between align-items-center"
+                id="headingOne"
+              >
+                <div class="faq-question">
+                  What vehicles are available for rent?
+                </div>
+                <i class="fa fa-chevron-down"></i>
+              </div>
+              <div id="collapseOne" class="collapse">
+                <div class="card-body">
+                  We offer a variety of vehicles including Innova Crysta, Innova
+                  Hycross, Etios, Tempo Travellers, and more.
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6">
+            <div class="card">
+              <div
+                class="card-header d-flex justify-content-between align-items-center"
+                id="headingOne"
+              >
+                <div class="faq-question">How is the fare calculated?</div>
+                <i class="fa fa-chevron-down"></i>
+              </div>
+              <div id="collapseOne" class="collapse">
+                <div class="card-body">
+                  The fare is calculated based on the distance traveled, type of
+                  vehicle, and the rental package chosen. We also charge fuel
+                  charges based on the kilometers driven.
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6">
+            <div class="card">
+              <div
+                class="card-header d-flex justify-content-between align-items-center"
+                id="headingOne"
+              >
+                <div class="faq-question">
+                  What is your cancellation and refund policy?
+                </div>
+                <i class="fa fa-chevron-down"></i>
+              </div>
+              <div id="collapseOne" class="collapse">
+                <div class="card-body">
+                  Our cancellation policy allows for cancellations up to 24
+                  hours before the travel date with a full refund. If the
+                  cancellation is made within 24 hours, a partial refund will be
+                  provided.
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6">
+            <div class="card">
+              <div
+                class="card-header d-flex justify-content-between align-items-center"
+                id="headingOne"
+              >
+                <div class="faq-question">How do I book a trip?</div>
+                <i class="fa fa-chevron-down"></i>
+              </div>
+              <div id="collapseOne" class="collapse">
+                <div class="card-body">
+                  You can book a trip by contacting us through our website or by
+                  calling our customer support. We also offer a direct WhatsApp
+                  booking option for your convenience.
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6">
+            <div class="card">
+              <div
+                class="card-header d-flex justify-content-between align-items-center"
+                id="headingOne"
+              >
+                <div class="faq-question">How qualified are your drivers?</div>
+                <i class="fa fa-chevron-down"></i>
+              </div>
+              <div id="collapseOne" class="collapse">
+                <div class="card-body">
+                  All our drivers are experienced, well-trained, and COVID-19
+                  vaccinated. They ensure a safe and comfortable journey for
+                  you.
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6">
+            <div class="card">
+              <div
+                class="card-header d-flex justify-content-between align-items-center"
+                id="headingOne"
+              >
+                <div class="faq-question">When should I book a trip?</div>
+                <i class="fa fa-chevron-down"></i>
+              </div>
+              <div id="collapseOne" class="collapse">
+                <div class="card-body">
+                  It is best to book your trip at least 3-5 days in advance,
+                  especially during peak seasons. However, last-minute bookings
+                  are also available depending on vehicle availability.
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6">
+            <div class="card">
+              <div
+                class="card-header d-flex justify-content-between align-items-center"
+                id="headingOne"
+              >
+                <div class="faq-question">
+                  What locations do you offer travel services to?
+                </div>
+                <i class="fa fa-chevron-down"></i>
+              </div>
+              <div id="collapseOne" class="collapse">
+                <div class="card-body">
+                  We offer travel services to several popular destinations
+                  including Madurai, Rameshwaram, Kanyakumari, Kodaikanal,
+                  Munnar, Thekkady, Coimbatore, Ooty, Chennai, and more.
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Repeat this col-md-6 structure for each FAQ question -->
+        </div>
+
+        <!-- Repeat this structure for each FAQ question -->
+      </div>
+    </section>
+
+    <section class="mb-5" id="tourPlaces">
+      <h2 class="text-center mb-4">Madurai Tourist Places</h2>
+      <div class="container">
+        <!-- Madurai Tourist Places Section -->
+
+        <div class="row">
+          <!-- Card for each place in Madurai -->
+          <div class="col-md-4 mb-4">
+            <div class="card h-100">
+              <img
+                src="assets/images/t1-test.webp"
+                class="card-img-top"
+                alt="Meenakshi Amman Temple"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Meenakshi Amman Temple</h5>
+                <p class="card-text">
+                  A historic Hindu temple dedicated to goddess Meenakshi and
+                  Lord Sundareswarar, known for its majestic architecture and
+                  cultural significance.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 mb-4">
+            <div class="card h-100">
+              <img
+                src="assets/images/t2.jpg"
+                class="card-img-top"
+                alt="Arulmigu Koodal Azhagar Temple"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Arulmigu Koodal Azhagar Temple</h5>
+                <p class="card-text">
+                  An ancient temple dedicated to Lord Vishnu, celebrated for its
+                  intricate sculptures and spiritual atmosphere.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 mb-4">
+            <div class="card h-100">
+              <img
+                src="assets/images/t3.webp"
+                class="card-img-top"
+                alt="Gandhi Memorial Museum"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Gandhi Memorial Museum</h5>
+                <p class="card-text">
+                  A museum preserving Mahatma Gandhi's life and legacy,
+                  showcasing artifacts and an extensive photo gallery.
+                </p>
+              </div>
+            </div>
+          </div>
+          <!-- Add similar card blocks for other Madurai places -->
+          <div class="col-md-4 mb-4">
+            <div class="card h-100">
+              <img
+                src="assets/images/t4.jpg"
+                class="card-img-top"
+                alt="Thirumalai Nayakkar Palace"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Thirumalai Nayakkar Palace</h5>
+                <p class="card-text">
+                  A stunning palace with grand pillars, showcasing the blend of
+                  Dravidian and Islamic architectural styles.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 mb-4">
+            <div class="card h-100">
+              <img
+                src="assets/images/t5.jpg"
+                class="card-img-top"
+                alt="Vandiyur Mariamman Teppakulam"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Vandiyur Mariamman Teppakulam</h5>
+                <p class="card-text">
+                  A large temple tank surrounded by scenic views, known for its
+                  floating festival celebrated annually.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 mb-4">
+            <div class="card h-100">
+              <img
+                src="assets/images/t6.jpg"
+                class="card-img-top"
+                alt="Arulmigu Sri Kallazhagar Temple"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Arulmigu Sri Kallazhagar Temple</h5>
+                <p class="card-text">
+                  An ancient Vishnu temple located in a picturesque setting,
+                  drawing devotees from across the region.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Nearby Tourist Places Section -->
+        <h2 class="text-center mb-4">Nearby Tourist Places</h2>
+        <div class="row">
+          <!-- Card for each nearby place -->
+          <div class="col-md-4 mb-4">
+            <div class="card h-100">
+              <img
+                src="assets/images/to1.jpg"
+                class="card-img-top"
+                alt="Rameshwaram, Dhanuskodi"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Rameshwaram, Dhanuskodi</h5>
+                <p class="card-text">
+                  A pilgrimage and tourist destination known for its sacred
+                  temples, beaches, and the mystical Dhanuskodi ruins.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 mb-4">
+            <div class="card h-100">
+              <img
+                src="assets/images/to2.jfif"
+                class="card-img-top"
+                alt="Kanyakumari, Poovar"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Kanyakumari, Poovar</h5>
+                <p class="card-text">
+                  India's southernmost point, known for stunning sunrises,
+                  Vivekananda Rock, and scenic backwaters in Poovar.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 mb-4">
+            <div class="card h-100">
+              <img
+                src="assets/images/to3.webp"
+                class="card-img-top"
+                alt="Kodaikanal"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Kodaikanal</h5>
+                <p class="card-text">
+                  A hill station known for its misty mountains, beautiful lakes,
+                  and lush green landscapes.
+                </p>
+              </div>
+            </div>
+          </div>
+          <!-- Add similar card blocks for other nearby places -->
+          <div class="col-md-4 mb-4">
+            <div class="card h-100">
+              <img
+                src="assets/images/to4.jpg"
+                class="card-img-top"
+                alt="Munnar, Thekkady"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Munnar, Thekkady</h5>
+                <p class="card-text">
+                  Popular hill stations with tea gardens, wildlife sanctuaries,
+                  and stunning viewpoints.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 mb-4">
+            <div class="card h-100">
+              <img
+                src="assets/images/to5.jpg"
+                class="card-img-top"
+                alt="Coimbatore, Ooty"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Coimbatore, Ooty</h5>
+                <p class="card-text">
+                  From bustling Coimbatore to the cool climate of Ooty, these
+                  spots offer a mix of nature and urban experiences.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 mb-4">
+            <div class="card h-100">
+              <img
+                src="assets/images/to6.jpg"
+                class="card-img-top"
+                alt="Thiruvananthapuram, Cochin, Alleppey"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Thiruvananthapuram, Cochin, Alleppey</h5>
+                <p class="card-text">
+                  Known for their beaches, cultural heritage, and serene
+                  backwaters.
+                </p>
               </div>
             </div>
           </div>
@@ -912,16 +1379,45 @@
       window.onscroll = function () {
         const navbar = document.querySelector(".navbar");
         const navbarToggle = document.getElementById("navbarSupportedContent");
+        const navbarLogoText = document.getElementById("navLogoText");
+        const navLinks = document.getElementById("navigationMenu");
+        const navBookNowPhoneContainer = document.getElementById(
+          "navBookNowPhoneContainer"
+        );
+        const navBookNowPhoneNumber = document.getElementById(
+          "navBookNowPhoneNumber"
+        );
+        const navBookNowSmPhoneContainer = document.getElementById(
+          "navBookNowPhoneSmContainer"
+        );
+        const navBookNowPhoneNumberForSm = document.getElementById(
+          "smNavBookNowPhoneNumber"
+        );
 
         if (window.scrollY > 50) {
           // Add classes when scrolled past 50px
-          navbar.classList.add("nav-bar-background-white");
+          navbar.classList.add("nav-bar-background");
           navbar.classList.add("shadow");
+          navbarLogoText.classList.add("custom-navbar-brand-scrolled");
+          navLinks.classList.add("nav-menu-link-white");
+          navBookNowPhoneContainer.classList.add("app-white-text-color");
+          navBookNowPhoneNumber.classList.add("app-secondary-text-color");
+
+          navBookNowSmPhoneContainer.classList.add("app-white-text-color");
+          navBookNowPhoneNumberForSm.classList.add("app-secondary-text-color");
         } else {
           // Only remove classes if the menu is not open
           if (!navbarToggle.classList.contains("show")) {
-            navbar.classList.remove("nav-bar-background-white");
+            navbar.classList.remove("nav-bar-background");
             navbar.classList.remove("shadow");
+            navbarLogoText.classList.remove("custom-navbar-brand-scrolled");
+            navLinks.classList.remove("nav-menu-link-white");
+            navBookNowPhoneContainer.classList.remove("app-white-text-color");
+            navBookNowPhoneNumber.classList.remove("app-secondary-text-color");
+            navBookNowSmPhoneContainer.classList.remove("app-white-text-color");
+            navBookNowPhoneNumberForSm.classList.remove(
+              "app-secondary-text-color"
+            );
           }
         }
       };
@@ -964,24 +1460,41 @@
       $(document).ready(function () {
         $("#navbarSupportedContent").on("show.bs.collapse", function () {
           if ($(window).width() < 992) {
-            $(".navbar").addClass("nav-bar-background-white");
+            $(".navbar").addClass("nav-bar-background");
             $(".navbar").addClass("shadow");
+            $("#navLogoText").addClass("custom-navbar-brand-scrolled");
+
+            // for navigation links
+            $("#navigationMenu").addClass("nav-menu-link-white");
+
+            // for book now container
+            $("#navBookNowPhoneSmContainer").addClass("app-white-text-color");
+            $("#smNavBookNowPhoneNumber").addClass("app-secondary-text-color");
           }
         });
 
         $("#navbarSupportedContent").on("hide.bs.collapse", function () {
           if ($(window).width() < 992) {
-            $(".navbar").removeClass("nav-bar-background-white");
+            $(".navbar").removeClass("nav-bar-background");
             $(".navbar").removeClass("shadow");
+            $("#navLogoText").removeClass("custom-navbar-brand-scrolled");
+            $("#navigationMenu").removeClass("nav-menu-link-white");
+            // for book now container
+            $("#navBookNowPhoneSmContainer").removeClass(
+              "app-white-text-color"
+            );
+            $("#smNavBookNowPhoneNumber").removeClass(
+              "app-secondary-text-color"
+            );
           }
         });
       });
       $(document).ready(function () {
-        $(".navbar-nav .nav-item").on("click", function () {
+        $(".navbar-nav .nav-item .nav-link").on("click", function () {
           // Remove active class from all nav links
-          $(".navbar-nav .nav-item").removeClass("active");
+          $(".navbar-nav .nav-item .nav-link").removeClass("active-nav");
           // Add active class to the clicked link
-          $(this).addClass("active");
+          $(this).addClass("active-nav");
         });
       });
     </script>
@@ -1071,6 +1584,34 @@ Additional Notes: ${notes}`;
         .addEventListener("click", function () {
           document.getElementById("carType").value = "Innova Crysta";
         });
+    </script>
+
+    <!-- for traffic table -->
+    <script>
+      $(function () {
+        $('[data-toggle="tooltip"]').tooltip();
+      });
+    </script>
+
+    <!-- faq accordion -->
+    <script>
+      $(document).ready(function () {
+        // Toggle accordion functionality
+        $(".card-header").click(function () {
+          const collapse = $(this).next(".collapse");
+
+          // Toggle the collapse state of the clicked card
+          collapse.collapse("toggle");
+
+          // Toggle the active state for styling
+          $(this).toggleClass("active");
+
+          // Ensure icon and text revert on collapse
+          collapse.on("hidden.bs.collapse", () => {
+            $(this).removeClass("active");
+          });
+        });
+      });
     </script>
   </body>
 </html>

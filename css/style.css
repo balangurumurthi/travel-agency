@@ -1,3 +1,10 @@
+:root {
+  --app-primary-color: #1a2d6d;
+  --app-secondary-color: #f08261;
+  --app-light-color: #f9f9f9;
+  --app-white-color: #ffffff;
+}
+
 /* Apply scroll snapping */
 body {
   scroll-snap-type: y mandatory;
@@ -8,7 +15,60 @@ body {
   font-size: 1rem;
   font-family: "Poppins", sans-serif; /* or use any bold, condensed font available */
   min-height: 100%;
-  background-color: #f9f9f9;
+  background-color: var(--app-light-color);
+  color: var(--app-primary-color); /* setting text to primary */
+}
+
+.app-white-text-color {
+  color: var(--app-white-color) !important;
+}
+
+.app-primary-text-color {
+  color: var(--app-primary-color) !important;
+}
+
+.app-secondary-text-color {
+  color: var(--app-secondary-color) !important;
+}
+
+.bg-app-primary {
+  background-color: var(--app-primary-color) !important;
+}
+
+.bg-app-secondary {
+  background-color: var(--app-secondary-color) !important;
+}
+
+.nav-bar-background {
+  background-color: var(--app-primary-color);
+  border-bottom: 5px solid var(--app-secondary-color);
+}
+
+/* General styling for the navbar links when scrolled */
+.nav-menu-link-white li a {
+  color: var(--app-white-color) !important; /* Set all links to white */
+}
+
+/* Style the active nav link specifically */
+.nav-menu-link-white li a.active-nav {
+  color: var(
+    --app-secondary-color
+  ) !important; /* Set the active link to the secondary color */
+}
+
+/* Optional: Smooth transition for color change */
+.nav-link,
+.nav-menu-link-white li a.active-nav {
+  transition: color 0.3s ease;
+}
+
+.active-nav {
+  color: var(--app-secondary-color) !important;
+}
+
+footer p,
+footer h5 {
+  color: white;
 }
 
 .phone-icon {
@@ -35,10 +95,8 @@ body {
 }
 
 .video-section {
-  height: 100vh;  
+  height: 100vh;
 }
-
-
 
 #bg-video {
   position: absolute;
@@ -183,7 +241,6 @@ body {
   color: white;
 }
 
-
 .card-img-top {
   height: 200px; /* Adjust height for uniformity */
   object-fit: cover; /* Ensure images fit well */
@@ -194,11 +251,12 @@ body {
   font-weight: 700;
   font-size: 2rem;
   letter-spacing: 1px;
-  background: linear-gradient(
+  /* background: linear-gradient(
     to right,
     #1a6baa,
     #ff6600
-  ); /* Blue to orange gradient */
+  );  */
+  background: linear-gradient(to right, var(--app-primary-color), #ff6600);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -208,6 +266,12 @@ body {
   font-size: 2rem;
   letter-spacing: 1px;
   color: white;
+}
+
+.custom-navbar-brand-scrolled {
+  background: transparent !important;
+  -webkit-text-fill-color: var(--app-white-color) !important;
+  color: var(--app-white-color);
 }
 
 /* Styling the secondary text "Tours and Travels" */
@@ -244,15 +308,15 @@ body {
   width: 0ch;
   text-align: center;
   font-weight: 700;
-  font-size: 2rem; 
+  font-size: 2rem;
   color: white;
   border-right: 2px solid white;
   white-space: nowrap;
   word-break: break-word;
-  overflow: hidden;    
-  animation: typing 4s steps(30, end) forwards, blink-caret 0.75s step-end 4s forwards;
+  overflow: hidden;
+  animation: typing 4s steps(30, end) forwards,
+    blink-caret 0.75s step-end 4s forwards;
 }
-
 
 /* Typing animation */
 @keyframes typing {
@@ -266,14 +330,14 @@ body {
 
 /* Blinking caret animation */
 @keyframes blink-caret {
-  0%, 50% {
+  0%,
+  50% {
     border-color: white;
   }
   100% {
     border-color: transparent;
   }
 }
-
 
 /* Yellow color for "TRAVEL" */
 .yellow-text {
@@ -285,6 +349,7 @@ body {
   font-size: 1.2rem;
   color: #fff;
   background-color: #007bff;
+  /* background-color: var(--app-secondary-color); */
   border: none;
   padding: 10px 20px;
   border-radius: 5px;
@@ -299,7 +364,6 @@ body {
 .explore-button:hover {
   background-color: #0056b3;
 }
-
 
 /* Slide-up animation for button */
 @keyframes slideUp {
@@ -335,10 +399,6 @@ body {
   position: relative;
 }
 
-.nav-bar-background-white {
-  background-color: #f9f9f9;
-}
-
 .logo-image {
   width: 100px;
   height: 100px;
@@ -347,7 +407,6 @@ body {
 .footer-logo-img {
   margin-top: 7.5px;
 }
-
 
 @media (max-width: 768px) {
   .card-img-top {
@@ -362,7 +421,6 @@ body {
 }
 
 @media (max-width: 478px) {
-
   .card-img-top {
     height: 180px;
   }
@@ -388,13 +446,12 @@ body {
   }
 
   .animated-text {
-    font-size: 1.2rem;    
+    font-size: 1.2rem;
   }
 }
 
-
 .pricing-details {
-  background-color: #f9f9f9; 
+  background-color: #f9f9f9;
   padding: 15px;
   border-radius: 5px;
   margin-top: 15px;
@@ -417,4 +474,122 @@ body {
 
 .pricing-details strong {
   font-weight: bold;
+}
+
+/* price table  */
+
+.table-container {
+  margin: 20px auto;
+  overflow-x: auto;
+}
+.table th,
+.table td {
+  text-align: center;
+  vertical-align: middle;
+}
+
+/* faq */
+/* FAQ Section Styles */
+
+/* Two-column layout on larger screens */
+.accordion .col-md-6 {
+  padding: 5px;
+}
+
+/* Card header styles */
+.card-header {
+  background-color: #1a2d6d; /* Primary color */
+  color: #ffffff; /* Default color: white */
+  padding: 15px;
+  cursor: pointer;
+  font-weight: bold;
+  text-align: left;
+  border: none;
+}
+
+/* Remove focus outline */
+.card-header:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+/* Default question text color */
+.faq-question {
+  color: #ffffff;
+}
+
+/* Change question color on expand */
+.card-header.active .faq-question {
+  color: #f08261; /* Secondary color */
+}
+
+/* Icon animation */
+.card-header i {
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.card-header.active i {
+  transform: rotate(180deg); /* Rotate on expand */
+  color: #f08261; /* Secondary color when expanded */
+}
+
+/* Card body styling */
+.card-body {
+  background-color: #ffffff; /* White background for content */
+  color: #1a2d6d; /* Primary color text */
+  padding: 15px;
+  border-top: 1px solid #e0e0e0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .accordion .col-md-6 {
+    padding: 5px;
+    width: 100%;
+  }
+}
+
+/* tour places */
+
+/* Custom styling */
+.section-header {
+  font-size: 2rem;
+  margin: 40px 0 20px;
+  color: #007bff;
+  text-align: center;
+  font-weight: bold;
+}
+
+.card {
+  overflow: hidden;
+  transition: transform 0.3s ease-in-out;
+}
+
+#bookNow .card:hover {
+  transform: none;
+}
+
+#faqAccordion .card:hover {
+  transform: scale(1.01);
+}
+
+.card:hover {
+  transform: scale(1.05);
+  /* box-shadow: 0 4px 20px rgba(255, 102, 0, 0.3); */
+}
+.card img {
+  height: 200px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+.card:hover img {
+  transform: scale(1.1);
+}
+.card-body h5 {
+  font-size: 1.1rem;
+  color: #333;
+}
+.card-body p {
+  font-size: 0.95rem;
+  color: #555;
 }
