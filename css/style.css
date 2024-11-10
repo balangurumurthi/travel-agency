@@ -489,48 +489,40 @@ footer h5 {
 }
 
 /* faq */
-/* FAQ Section Styles */
-
-/* Two-column layout on larger screens */
-.accordion .col-md-6 {
-  padding: 5px;
-}
-
 /* Card header styles */
 .card-header {
   background-color: #1a2d6d; /* Primary color */
-  color: #ffffff; /* Default color: white */
-  padding: 15px;
+  color: #ffffff;
   cursor: pointer;
   font-weight: bold;
-  text-align: left;
+  padding: 15px;
   border: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 /* Remove focus outline */
-.card-header:focus {
+.card-header:focus,
+.card-header:active {
   outline: none;
   box-shadow: none;
 }
 
-/* Default question text color */
-.faq-question {
-  color: #ffffff;
-}
-
-/* Change question color on expand */
-.card-header.active .faq-question {
-  color: #f08261; /* Secondary color */
-}
-
-/* Icon animation */
+/* Chevron icon animation */
 .card-header i {
   transition: transform 0.3s ease, color 0.3s ease;
 }
 
+/* Rotate the icon and change color on expand */
 .card-header.active i {
-  transform: rotate(180deg); /* Rotate on expand */
-  color: #f08261; /* Secondary color when expanded */
+  transform: rotate(180deg);
+  color: #f08261; /* Secondary color */
+}
+
+/* Change question color on expand */
+.card-header.active {
+  color: #f08261; /* Secondary color */
 }
 
 /* Card body styling */
@@ -541,12 +533,9 @@ footer h5 {
   border-top: 1px solid #e0e0e0;
 }
 
-/* Responsive adjustments */
-@media (max-width: 768px) {
-  .accordion .col-md-6 {
-    padding: 5px;
-    width: 100%;
-  }
+/* Equal-height cards and layout adjustments */
+.card {
+  margin-bottom: 20px;
 }
 
 /* tour places */

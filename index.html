@@ -464,173 +464,151 @@
     </section>
 
     <!-- FAQ -->
-    <section class="mb-5" id="faq">
+    <div class="container my-5">
       <h2 class="text-center mb-4">Frequently Asked Questions</h2>
-      <div class="container">
-        <div class="accordion row" id="faqAccordion">
-          <div class="col-md-6">
+      <div class="row">
+        <div class="col-md-6">
+          <div id="faqAccordionLeft" class="accordion">
+            <!-- Card 1 -->
             <div class="card">
               <div
-                class="card-header d-flex justify-content-between align-items-center"
-                id="headingOne"
+                class="card-header"
+                data-toggle="collapse"
+                data-target="#collapseOne"
               >
-                <div class="faq-question">What services do you offer?</div>
+                <span>What services do you offer?</span>
                 <i class="fa fa-chevron-down"></i>
               </div>
-              <div id="collapseOne" class="collapse">
+              <div
+                id="collapseOne"
+                class="collapse"
+                data-parent="#faqAccordionLeft"
+              >
                 <div class="card-body">
-                  Madurai Murugan Tours and Travels offers a range of travel
-                  services, including...
+                  Madurai Murugan Tours and Travels offers a variety of travel
+                  services including sightseeing tours, intercity trips, and
+                  custom itineraries.
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="card">
+              <div
+                class="card-header"
+                data-toggle="collapse"
+                data-target="#collapseTwo"
+              >
+                <span>What vehicles are available?</span>
+                <i class="fa fa-chevron-down"></i>
+              </div>
+              <div
+                id="collapseTwo"
+                class="collapse"
+                data-parent="#faqAccordionLeft"
+              >
+                <div class="card-body">
+                  We have a fleet of vehicles including Innova Crysta, Tempo
+                  Travellers, Etios, and other comfortable options.
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="card">
+              <div
+                class="card-header"
+                data-toggle="collapse"
+                data-target="#collapseThree"
+              >
+                <span>How is the fare calculated?</span>
+                <i class="fa fa-chevron-down"></i>
+              </div>
+              <div
+                id="collapseThree"
+                class="collapse"
+                data-parent="#faqAccordionLeft"
+              >
+                <div class="card-body">
+                  Fares are based on distance, vehicle type, and time. Detailed
+                  pricing options are available on our Pricing page.
                 </div>
               </div>
             </div>
           </div>
-
-          <div class="col-md-6">
-            <div class="card">
-              <div
-                class="card-header d-flex justify-content-between align-items-center"
-                id="headingOne"
-              >
-                <div class="faq-question">
-                  What vehicles are available for rent?
-                </div>
-                <i class="fa fa-chevron-down"></i>
-              </div>
-              <div id="collapseOne" class="collapse">
-                <div class="card-body">
-                  We offer a variety of vehicles including Innova Crysta, Innova
-                  Hycross, Etios, Tempo Travellers, and more.
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-md-6">
-            <div class="card">
-              <div
-                class="card-header d-flex justify-content-between align-items-center"
-                id="headingOne"
-              >
-                <div class="faq-question">How is the fare calculated?</div>
-                <i class="fa fa-chevron-down"></i>
-              </div>
-              <div id="collapseOne" class="collapse">
-                <div class="card-body">
-                  The fare is calculated based on the distance traveled, type of
-                  vehicle, and the rental package chosen. We also charge fuel
-                  charges based on the kilometers driven.
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-md-6">
-            <div class="card">
-              <div
-                class="card-header d-flex justify-content-between align-items-center"
-                id="headingOne"
-              >
-                <div class="faq-question">
-                  What is your cancellation and refund policy?
-                </div>
-                <i class="fa fa-chevron-down"></i>
-              </div>
-              <div id="collapseOne" class="collapse">
-                <div class="card-body">
-                  Our cancellation policy allows for cancellations up to 24
-                  hours before the travel date with a full refund. If the
-                  cancellation is made within 24 hours, a partial refund will be
-                  provided.
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-md-6">
-            <div class="card">
-              <div
-                class="card-header d-flex justify-content-between align-items-center"
-                id="headingOne"
-              >
-                <div class="faq-question">How do I book a trip?</div>
-                <i class="fa fa-chevron-down"></i>
-              </div>
-              <div id="collapseOne" class="collapse">
-                <div class="card-body">
-                  You can book a trip by contacting us through our website or by
-                  calling our customer support. We also offer a direct WhatsApp
-                  booking option for your convenience.
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-md-6">
-            <div class="card">
-              <div
-                class="card-header d-flex justify-content-between align-items-center"
-                id="headingOne"
-              >
-                <div class="faq-question">How qualified are your drivers?</div>
-                <i class="fa fa-chevron-down"></i>
-              </div>
-              <div id="collapseOne" class="collapse">
-                <div class="card-body">
-                  All our drivers are experienced, well-trained, and COVID-19
-                  vaccinated. They ensure a safe and comfortable journey for
-                  you.
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-md-6">
-            <div class="card">
-              <div
-                class="card-header d-flex justify-content-between align-items-center"
-                id="headingOne"
-              >
-                <div class="faq-question">When should I book a trip?</div>
-                <i class="fa fa-chevron-down"></i>
-              </div>
-              <div id="collapseOne" class="collapse">
-                <div class="card-body">
-                  It is best to book your trip at least 3-5 days in advance,
-                  especially during peak seasons. However, last-minute bookings
-                  are also available depending on vehicle availability.
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-md-6">
-            <div class="card">
-              <div
-                class="card-header d-flex justify-content-between align-items-center"
-                id="headingOne"
-              >
-                <div class="faq-question">
-                  What locations do you offer travel services to?
-                </div>
-                <i class="fa fa-chevron-down"></i>
-              </div>
-              <div id="collapseOne" class="collapse">
-                <div class="card-body">
-                  We offer travel services to several popular destinations
-                  including Madurai, Rameshwaram, Kanyakumari, Kodaikanal,
-                  Munnar, Thekkady, Coimbatore, Ooty, Chennai, and more.
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Repeat this col-md-6 structure for each FAQ question -->
         </div>
 
-        <!-- Repeat this structure for each FAQ question -->
+        <div class="col-md-6">
+          <div id="faqAccordionRight" class="accordion">
+            <!-- Card 4 -->
+            <div class="card">
+              <div
+                class="card-header"
+                data-toggle="collapse"
+                data-target="#collapseFour"
+              >
+                <span>What is the cancellation policy?</span>
+                <i class="fa fa-chevron-down"></i>
+              </div>
+              <div
+                id="collapseFour"
+                class="collapse"
+                data-parent="#faqAccordionRight"
+              >
+                <div class="card-body">
+                  Cancellations made 24 hours in advance are eligible for a full
+                  refund. Conditions apply.
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 5 -->
+            <div class="card">
+              <div
+                class="card-header"
+                data-toggle="collapse"
+                data-target="#collapseFive"
+              >
+                <span>How can I book a service?</span>
+                <i class="fa fa-chevron-down"></i>
+              </div>
+              <div
+                id="collapseFive"
+                class="collapse"
+                data-parent="#faqAccordionRight"
+              >
+                <div class="card-body">
+                  You can book through our website or contact us directly at the
+                  provided phone number.
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 6 -->
+            <div class="card">
+              <div
+                class="card-header"
+                data-toggle="collapse"
+                data-target="#collapseSix"
+              >
+                <span>Where do you offer services?</span>
+                <i class="fa fa-chevron-down"></i>
+              </div>
+              <div
+                id="collapseSix"
+                class="collapse"
+                data-parent="#faqAccordionRight"
+              >
+                <div class="card-body">
+                  We offer services in various locations including Madurai,
+                  Rameshwaram, Kodaikanal, Ooty, and more.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-    </section>
+    </div>
 
     <section class="mb-5" id="tourPlaces">
       <h2 class="text-center mb-4">Madurai Tourist Places</h2>
@@ -1596,18 +1574,14 @@ Additional Notes: ${notes}`;
     <!-- faq accordion -->
     <script>
       $(document).ready(function () {
-        // Toggle accordion functionality
+        // Toggle the active state and rotate icon
         $(".card-header").click(function () {
-          const collapse = $(this).next(".collapse");
-
-          // Toggle the collapse state of the clicked card
-          collapse.collapse("toggle");
-
-          // Toggle the active state for styling
+          const collapseTarget = $(this).data("target");
+          $(collapseTarget).collapse("toggle");
           $(this).toggleClass("active");
 
-          // Ensure icon and text revert on collapse
-          collapse.on("hidden.bs.collapse", () => {
+          // Ensure icon and question color reset on collapse
+          $(collapseTarget).on("hidden.bs.collapse", () => {
             $(this).removeClass("active");
           });
         });
