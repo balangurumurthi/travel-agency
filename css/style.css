@@ -582,3 +582,17 @@ footer h5 {
   font-size: 0.95rem;
   color: #555;
 }
+
+.tooltip-icon {
+  cursor: pointer;
+  color: #f08261; /* Adjust color as needed */
+}
+
+.info-icon i {
+  margin-left: 5px;
+  color: #f08261; /* Secondary color for the icon */
+  font-size: 0.9rem;
+  cursor: pointer;
+  border-radius: 50%;
+  padding: 2px;
+}

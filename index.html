@@ -403,60 +403,69 @@
             <tr>
               <th>Vehicle</th>
               <th>Seat Capacity</th>
-              <th>Above 300km Rate</th>
-              <th>Below 300km Day Rent</th>
-              <th>Fuel Charge (per km)</th>
-              <th>Hourly Rental Package</th>
+              <th>Above 300km</th>
+              <th>Below 300km</th>
+              <th>Fuel Charge</th>
+              <th>
+                Hour Package&nbsp;
+                <span
+                  class="info-icon"
+                  data-toggle="tooltip"
+                  data-placement="top"
+                  title="Inclusive of 8 hours and up to 80 km"
+                  ><i class="fas fa-info-circle"></i
+                ></span>
+              </th>
             </tr>
           </thead>
           <tbody>
             <tr>
               <td>Innova Crysta</td>
               <td>7</td>
-              <td>22 rs/km</td>
-              <td>2600</td>
-              <td>18 rs/km</td>
-              <td>8 hrs 80 km = 4500</td>
+              <td>₹22/km</td>
+              <td>₹2600/day</td>
+              <td>₹18/km</td>
+              <td>₹4500</td>
             </tr>
             <tr>
               <td>Innova Hycross</td>
               <td>7</td>
-              <td>26 rs/km</td>
-              <td>3000</td>
-              <td>18 rs/km</td>
-              <td>8 hrs 80 km = 4500</td>
+              <td>₹26/km</td>
+              <td>₹3000/day</td>
+              <td>₹18/km</td>
+              <td>₹4500</td>
             </tr>
             <tr>
               <td>Innova or Equivalent</td>
               <td>7</td>
-              <td>18 rs/km</td>
-              <td>2200</td>
-              <td>12 rs/km</td>
-              <td>8 hrs 80 km = 3200</td>
+              <td>₹18/km</td>
+              <td>₹2200/day</td>
+              <td>₹12/km</td>
+              <td>₹3200</td>
             </tr>
             <tr>
               <td>Etios or Equivalent</td>
               <td>4</td>
-              <td>14 rs/km</td>
-              <td>1600</td>
-              <td>10 rs/km</td>
-              <td>8 hrs 80 km = 2600</td>
+              <td>₹14/km</td>
+              <td>₹1600/day</td>
+              <td>₹10/km</td>
+              <td>₹2600</td>
             </tr>
             <tr>
               <td>Tempo Traveller A/C</td>
               <td>12</td>
-              <td>23 rs/km</td>
-              <td>2800</td>
-              <td>18 rs/km</td>
-              <td>8 hrs 80 km = 4500</td>
+              <td>₹23/km</td>
+              <td>₹2800/day</td>
+              <td>₹18/km</td>
+              <td>₹4500</td>
             </tr>
             <tr>
-              <td>Tempo Traveller 18 Seater A/C</td>
+              <td>Tempo Traveller A/C</td>
               <td>18</td>
-              <td>29 rs/km</td>
-              <td>3800</td>
-              <td>18 rs/km</td>
-              <td>8 hrs 80 km = 4500</td>
+              <td>₹29/km</td>
+              <td>₹3800/day</td>
+              <td>₹18/km</td>
+              <td>₹4500</td>
             </tr>
           </tbody>
         </table>
@@ -1585,6 +1594,13 @@ Additional Notes: ${notes}`;
             $(this).removeClass("active");
           });
         });
+      });
+    </script>
+
+    <!-- tooltip -->
+    <script>
+      $(document).ready(function () {
+        $('[data-toggle="tooltip"]').tooltip();
       });
     </script>
   </body>
