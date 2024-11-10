@@ -3,6 +3,7 @@
   --app-secondary-color: #f08261;
   --app-light-color: #f9f9f9;
   --app-white-color: #ffffff;
+  --app-mosgreen-color: #8B8B02;
 }
 
 /* Apply scroll snapping */
@@ -21,6 +22,10 @@ body {
 
 .app-white-text-color {
   color: var(--app-white-color) !important;
+}
+
+.app-mosgreen-text-color {
+  color: var(--app-mosgreen-color) !important;
 }
 
 .app-primary-text-color {
@@ -117,6 +122,55 @@ footer h5 {
   height: 100vh;
   background-size: cover;
   width: 100%;
+}
+
+#service .card-title{
+  color: var(--app-primary-color) !important;
+  font-weight: bold;
+  margin-bottom: 8px !important;
+}
+
+#service .card-text {
+  color: var(--app-mosgreen-color) !important;
+  /* font-weight: bold; */
+  font-size: 1rem;
+}
+
+.pricing-details-container {
+  margin-top: 15px;
+  min-height: 200px;
+}
+
+.small-text {
+  font-size: 1rem !important;
+}
+
+.extra-small-text {
+  font-size: 0.9rem !important;
+}
+
+.price-label {
+  display: inline-block;
+  max-width: 115px;
+  width: 100%;
+}
+
+.price-colon {
+  margin-left: auto;
+}
+
+/*  to align label and price - colon center */
+.pricing-details li {
+  display: flex;  
+
+  strong {
+    display: flex;
+    margin-right: 8px;
+  }
+}
+
+.pricing-heading {
+  margin-bottom: 8px;
 }
 
 /* Phone Number and Car Icon Styling */
@@ -295,7 +349,7 @@ footer h5 {
   background: #f8f9fa; /* Change this to your background color or image */
   text-align: center;
 
-  background-image: url("main-test.png");
+  background-image: url("assets/images/main.jpg");
   background-size: cover;
   background-position: center;
   overflow: hidden; /* Hide the overflow for clean edges */
@@ -450,11 +504,15 @@ footer h5 {
   }
 }
 
+.bookNowButton {
+  color: var(--app-white-color);
+  background-color: var(--app-secondary-color);
+}
+
 .pricing-details {
-  background-color: #f9f9f9;
+  background-color: rgba(201, 217, 242, 0.3);
   padding: 15px;
-  border-radius: 5px;
-  margin-top: 15px;
+  border-radius: 5px;  
 }
 
 .pricing-details p {
