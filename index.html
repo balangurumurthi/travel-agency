@@ -1361,6 +1361,21 @@
       });
     </script>
 
+    <!-- navbar icon white -->
+    <script>
+      $(document).ready(function () {
+        $(window).scroll(function () {
+          if ($(window).scrollTop() > 50) {
+            $(".navbar-toggler-icon").addClass("navbar-toggler-icon-white");
+            $(".navbar-toggler").addClass("navbar-toggler-button");
+          } else {
+            $(".navbar-toggler-icon").removeClass("navbar-toggler-icon-white");
+            $(".navbar-toggler").removeClass("navbar-toggler-button");
+          }
+        });
+      });
+    </script>
+
     <!-- navbar color change -->
     <script>
       window.onscroll = function () {
