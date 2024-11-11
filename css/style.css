@@ -662,3 +662,8 @@ footer h5 {
 .navbar-toggler-button {
   border-color: white !important;
 }
+
+.below-300-price-table table, .below-300-price-table td , .below-300-price-table th {
+  border: 1px solid black;
+  margin-top: 4px;
+}
