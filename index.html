@@ -132,30 +132,67 @@
 
       <!-- Phone number div for large screens (displayed inline) -->
       <div
-        class="d-none d-lg-flex align-items-center"
+        class="d-none d-lg-flex align-items-center flex-column justify-content-start"
         id="navBookNowPhoneContainer"
       >
-        <i class="fa-solid fa-phone phone-icon"></i>
-        <span style="margin-left: 8px">
-          Book Now:
-          <a href="tel:+918608153862" id="navBookNowPhoneNumber"
-            ><strong>+91 86081 53862</strong></a
+        <!-- phone -->
+        <div class="d-flex align-items-center w-100">
+          <i class="fa-solid fa-phone phone-icon"></i>
+          <span style="margin-left: 8px" class="d-flex align-items-center">
+            <div class="d-flex flex-column ml-1">
+              <a href="tel:+918608153862" id="navBookNowPhoneNumber1"
+                ><strong>+91 86081 53862</strong></a
+              >
+              <a href="tel:+919994667622" id="navBookNowPhoneNumber2"
+                ><strong>+91 99946 67622</strong></a
+              >
+            </div>
+          </span>
+        </div>
+
+        <!-- email -->
+        <div class="d-flex align-items-center">
+          <i
+            class="fa-solid fa-envelope phone-icon"
+            style="margin-right: 8px"
+          ></i>
+          <a href="mailto:murugantravelsmadurai7@gmail.com" id="navBookNowEmail"
+            ><strong>murugantravelsmadurai7@gmail.com</strong></a
           >
-        </span>
+        </div>
       </div>
 
       <!-- Phone number div for smaller screens (displayed below logo) -->
       <div
-        class="d-lg-none w-100 text-start mt-2"
+        class="d-lg-none w-100 text-start d-flex align-items-center flex-column justify-content-start mt-2"
         id="navBookNowPhoneSmContainer"
       >
-        <i class="fa-solid fa-phone phone-icon"></i>
-        <span>
-          Book Now:
-          <a href="tel:+918608153862" id="smNavBookNowPhoneNumber"
-            ><strong>+91 86081 53862</strong></a
+        <!-- phone -->
+        <div class="d-flex align-items-center w-100">
+          <i class="fa-solid fa-phone phone-icon"></i>
+          <span style="margin-left: 8px" class="d-flex align-items-center">
+            <div class="d-flex flex-column m1-1">
+              <a href="tel:+918608153862" id="smNavBookNowPhoneNumber1"
+                ><strong>+91 86081 53862</strong></a
+              >
+              <a href="tel:+919994667622" id="smNavBookNowPhoneNumber2"
+                ><strong>+91 99946 67622</strong></a
+              >
+            </div>
+          </span>
+        </div>
+
+        <div class="d-flex align-items-center w-100">
+          <i
+            class="fa-solid fa-envelope phone-icon"
+            style="margin-right: 8px"
+          ></i>
+          <a
+            href="mailto:murugantravelsmadurai7@gmail.com"
+            id="navBookNowEmailSm"
+            ><strong>murugantravelsmadurai7@gmail.com</strong></a
           >
-        </span>
+        </div>
       </div>
     </nav>
 
@@ -1584,7 +1621,8 @@
             <!-- phone number -->
             <p class="mb-2">
               <i class="fa-solid fa-phone"></i>
-              <a href="tel:+918608153862">+91 86081 53862</a>
+              <a href="tel:+918608153862">+91 86081 53862</a>&nbsp;&nbsp;/&nbsp;
+              <a href="tel:+919994667622">+91 99946 67622</a>
             </p>
 
             <!-- email -->
@@ -1697,16 +1735,25 @@
         const navBookNowPhoneContainer = document.getElementById(
           "navBookNowPhoneContainer"
         );
-        const navBookNowPhoneNumber = document.getElementById(
-          "navBookNowPhoneNumber"
+        const navBookNowPhoneNumber1 = document.getElementById(
+          "navBookNowPhoneNumber1"
         );
+        const navBookNowPhoneNumber2 = document.getElementById(
+          "navBookNowPhoneNumber2"
+        );
+        const navBookNowEmail = document.getElementById("navBookNowEmail");
+
+        const navBookNowEmailSm = document.getElementById("navBookNowEmailSm");
         const navBookNowSmPhoneContainer = document.getElementById(
           "navBookNowPhoneSmContainer"
         );
-        const navBookNowPhoneNumberForSm = document.getElementById(
-          "smNavBookNowPhoneNumber"
+        const navBookNowPhoneNumberForSm1 = document.getElementById(
+          "smNavBookNowPhoneNumber1"
         );
 
+        const navBookNowPhoneNumberForSm2 = document.getElementById(
+          "smNavBookNowPhoneNumber2"
+        );
         if (window.scrollY > 50) {
           // Add classes when scrolled past 50px
           navbar.classList.add("nav-bar-background");
@@ -1714,10 +1761,13 @@
           navbarLogoText.classList.add("custom-navbar-brand-scrolled");
           navLinks.classList.add("nav-menu-link-white");
           navBookNowPhoneContainer.classList.add("app-white-text-color");
-          navBookNowPhoneNumber.classList.add("app-secondary-text-color");
-
+          navBookNowPhoneNumber1.classList.add("app-secondary-text-color");
+          navBookNowPhoneNumber2.classList.add("app-secondary-text-color");
+          navBookNowEmail.classList.add("app-secondary-text-color");
+          navBookNowEmailSm.classList.add("app-secondary-text-color");
           navBookNowSmPhoneContainer.classList.add("app-white-text-color");
-          navBookNowPhoneNumberForSm.classList.add("app-secondary-text-color");
+          navBookNowPhoneNumberForSm1.classList.add("app-secondary-text-color");
+          navBookNowPhoneNumberForSm2.classList.add("app-secondary-text-color");
         } else {
           // Only remove classes if the menu is not open
           if (!navbarToggle.classList.contains("show")) {
@@ -1726,9 +1776,15 @@
             navbarLogoText.classList.remove("custom-navbar-brand-scrolled");
             navLinks.classList.remove("nav-menu-link-white");
             navBookNowPhoneContainer.classList.remove("app-white-text-color");
-            navBookNowPhoneNumber.classList.remove("app-secondary-text-color");
+            navBookNowPhoneNumber1.classList.remove("app-secondary-text-color");
+            navBookNowPhoneNumber2.classList.remove("app-secondary-text-color");
+            navBookNowEmail.classList.remove("app-secondary-text-color");
+            navBookNowEmailSm.classList.remove("app-secondary-text-color");
             navBookNowSmPhoneContainer.classList.remove("app-white-text-color");
-            navBookNowPhoneNumberForSm.classList.remove(
+            navBookNowPhoneNumberForSm1.classList.remove(
+              "app-secondary-text-color"
+            );
+            navBookNowPhoneNumberForSm2.classList.remove(
               "app-secondary-text-color"
             );
           }
