@@ -665,5 +665,6 @@ footer h5 {
 
 .below-300-price-table table, .below-300-price-table td , .below-300-price-table th {
   border: 1px solid black;
+  text-align: center;
   margin-top: 4px;
 }
